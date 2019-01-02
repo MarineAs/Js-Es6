@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table td{
+        border: 1px solid black;
+    }
+</style>
+<table id="table">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<script>
+ /////  version 1
+  /*  let table= document.querySelector(`#table`);
+
+    let arr = [];
+    function fillTable (table, arr){
+
+        for (let i=0;i<10;i++){
+            arr[i]=[];
+            let tr=document.createElement(`tr`);
+            for (let j=0; j<10;j++){
+                if ((i==j)||(9-i==j)){
+                    arr[i][j]='x';
+                }
+                else arr[i][j]='0';
+                let td = document.createElement(`td`);
+                td.innerHTML = arr[i][j];
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        return arr[i][j];
+    }
+    fillTable(table,arr);*/
+  //version 2
+
+ let arr = [];
+ let n = 10;
+ let m = 10;
+ function fillTable (arr){
+let sum = 0;
+     for (let i=0;i< n;i++){
+         arr[i]=[];
+         for (let j=9-i; j>=0;j-- ){
+             if (9==i+j){
+                    console.log(i);
+                    console.log(j);
+                 arr[i][j]='x';
+                 let td = document.getElementsByTagName(`td`);
+                 sum = 10*i+j;
+                 td[sum].innerHTML = arr[i][j];
+                 break;
+             }
+
+             else{
+             arr[i][j]='0';
+             let td = document.getElementsByTagName(`td`);
+             sum = 10*i+j;
+             td[sum].innerHTML = arr[i][j];
+         }}debugger;
+     }
+ }
+ fillTable(arr);
+
+
+</script>
+
+</body>
+</html>
